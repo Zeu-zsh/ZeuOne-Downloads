@@ -1,333 +1,405 @@
 body {
-    background-color: var(--bg-color);
-    color: var(--second-color);
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--second-color);
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 
-    .knewave-regular {
-        font-family: "Knewave", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
+  .knewave-regular {
+    font-family: "Knewave", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 :root {
-    --main-color: #2560ff;
-    --second-color: #F4F3F5;
-    --bg-color: rgb(17 19 20);
+  --main-color: #2560ff;
+  --second-color: #f4f3f5;
+  --bg-color: rgb(17 19 20);
 }
 
 #intro {
-    font-family: "Knewave", serif;
-    z-index: 99;
-    position: absolute;
+  font-family: "Knewave", serif;
+  z-index: 99;
+  position: absolute;
 }
 
 section.intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-color);
-    width: 100%;
-    height: 100vh;
-    font-size: 10vh;
-    animation: introSlide 1s ease-in 3s;
-    font-family: "Holtwood One SC", serif;
-    animation-fill-mode: forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100vh;
+  font-size: 10vh;
+  animation: introSlide 1s ease-in 3s;
+  font-family: "Holtwood One SC", serif;
+  animation-fill-mode: forwards;
 }
 
 @keyframes introSlide {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    100% {
-        transform: translateY(-100%);
-    }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 section div#bvn {
-    width: 100%;
-    height: 100vh;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-color);
-    animation: bvnSlide 1s ease-in 1s;
-    animation-fill-mode: forwards;
-    color: var(--bg-color);
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  animation: bvnSlide 1s ease-in 1s;
+  animation-fill-mode: forwards;
+  color: var(--bg-color);
 }
 
 @keyframes bvnSlide {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    100% {
-        transform: translateX(-100%);
-    }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 section div#portfo {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    z-index: 1;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg-color);
-    animation: portfoSlide 1s ease-in 3s;
-    animation-fill-mode: forwards;
-    color: var(--main-color);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  animation: portfoSlide 1s ease-in 3s;
+  animation-fill-mode: forwards;
+  color: var(--main-color);
 }
 
 @keyframes portfoSlide {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    100% {
-        transform: translateY(-100%);
-    }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 .welcome-container {
-    flex-direction: column;
-    min-height: 100px;
-    padding: 0 15px;
-    gap: 5px;
+  flex-direction: column;
+  min-height: 100px;
+  padding: 0 15px;
+  gap: 5px;
 }
 
 #welcomeText,
 .static-text {
-    font-size: 1.2em;
-    text-align: center;
-    white-space: normal;
-    min-height: 2.4em;
-    width: 100%;
-    padding: 0 5px;
+  font-size: 1.2em;
+  text-align: center;
+  white-space: normal;
+  min-height: 2.4em;
+  width: 100%;
+  padding: 0 5px;
 }
 
 #welcomeText {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 header {
-    font-family: "Knewave", serif;
-    font-size: 2.5rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
+  font-family: "Knewave", serif;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
 }
 
 @keyframes menuTransform {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 
-    100% {
-        transform: translateY(-50%) rotate(-90deg);
-        left: 20px;
-    }
+  100% {
+    transform: translateY(-50%) rotate(-90deg);
+    left: 20px;
+  }
 }
 
 .navbar {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    z-index: 98;
-    padding: 15px 30px;
-    background: rgba(37, 96, 255, 0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 20px;
-    border: 1px solid rgba(37, 96, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(37, 96, 255, 0.1);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  z-index: 98;
+  padding: 15px 30px;
+  background: rgba(37, 96, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(37, 96, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(37, 96, 255, 0.1);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navbar.active, .navbar.scrolled {
-    top: 20px;
-    transform: translateX(-50%);
-    background: rgba(17, 19, 20, 0.95);
-    border: 1px solid rgba(37, 96, 255, 0.3);
-    padding: 12px 25px;
+.navbar.active,
+.navbar.scrolled {
+  top: 20px;
+  transform: translateX(-50%);
+  background: rgba(17, 19, 20, 0.95);
+  border: 1px solid rgba(37, 96, 255, 0.3);
+  padding: 12px 25px;
 }
 
 .name-navbar {
-    position: fixed;
-    left: 90px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    z-index: 98;
-    height: auto;
+  position: fixed;
+  left: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 98;
+  height: auto;
 }
 
 .intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 9999;
 }
 
 #mainSite {
-    position: relative;
-    z-index: 97;
-    display: none;
+  position: relative;
+  z-index: 97;
+  display: none;
 }
 
 .intro.hide {
-    animation: fadeOut 1s forwards;
-    pointer-events: none;
+  animation: fadeOut 1s forwards;
+  pointer-events: none;
 }
 
 @keyframes fadeOut {
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .name-navbar p {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    font-size: 1.2em;
-    opacity: 0;
-    transition: opacity 0.3s;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .nav-item {
-    width: 50px;
-    height: 50px;
-    background: rgba(37, 96, 255, 0.1);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
+  width: 50px;
+  height: 50px;
+  background: rgba(37, 96, 255, 0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
 }
 
 .nav-item:hover {
-    transform: translateY(-5px);
-    background: rgba(37, 96, 255, 0.2);
-    border-color: rgba(37, 96, 255, 0.4);
+  transform: translateY(-5px);
+  background: rgba(37, 96, 255, 0.2);
+  border-color: rgba(37, 96, 255, 0.4);
 }
 
 .nav-item::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    width: 80%;
-    height: 3px;
-    background: var(--main-color);
-    border-radius: 2px;
-    transition: transform 0.3s ease;
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 3px;
+  background: var(--main-color);
+  border-radius: 2px;
+  transition: transform 0.3s ease;
 }
 
 .nav-item:hover::after {
-    transform: translateX(-50%) scaleX(1);
+  transform: translateX(-50%) scaleX(1);
 }
 
 .nav-item.active {
-    background: rgba(37, 96, 255, 0.15);
-    border: 2px solid var(--main-color);
-    box-shadow: 0 0 20px rgba(37, 96, 255, 0.3);
+  background: rgba(37, 96, 255, 0.15);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 20px rgba(37, 96, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-item.active:hover {
+  background: rgba(37, 96, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
 }
 
 .nav-item.active::after {
-    transform: translateX(-50%) scaleX(1);
+  transform: translateX(-50%) scaleX(1);
 }
 
 .nav-item img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    filter: brightness(1.2);
-    transition: transform 0.3s ease;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: brightness(1.2);
+  transition: transform 0.3s ease;
 }
 
 .nav-item:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .download-container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  background: var(--bg-color);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin: 0;
+  overflow: hidden;
 }
 
-.download-container p {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: "Knewave", serif;
-    color: var(--main-color);
+.step {
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step.active {
+  display: flex;
 }
 
 .download-welcome {
-    background-color: var(--main-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 60%;
-    border-radius: 25px;
+  background: var(--main-color);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+.download-container p {
+  color: white;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.welcome-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 20px 0;
+  color: white;
+  text-align: left;
+}
+
+.next-step {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 15px 30px;
+  background: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 100;
+  font-size: 1rem;
+}
+
+.next-step:hover {
+  transform: scale(1.05);
 }
 
 /* Scrollbar personnalisée - Pour Webkit (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(17, 19, 20, 0.95);
-    border-radius: 10px;
+  background: rgba(17, 19, 20, 0.95);
+  border-radius: 25px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--main-color);
-    border-radius: 10px;
-    border: 2px solid rgba(17, 19, 20, 0.95);
-    transition: all 0.3s ease;
+  background: var(--main-color);
+  border-radius: 50px;
+  border: 2px solid rgba(17, 19, 20, 0.95);
+  transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(37, 96, 255, 0.8);
-    box-shadow: 0 0 10px rgba(37, 96, 255, 0.5);
+  background: rgba(37, 96, 255, 0.8);
+  box-shadow: 0 0 10px rgba(37, 96, 255, 0.5);
 }
 
 /* Scrollbar personnalisée - Pour Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--main-color) rgba(17, 19, 20, 0.95);
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-color) rgba(17, 19, 20, 0.95);
+}
+
+.steps-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
 }
