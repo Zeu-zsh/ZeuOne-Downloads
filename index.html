@@ -29,7 +29,7 @@
       </header>
       <main>
         <div class="navbar">
-          <a href="#ftnMethod" class="nav-item">
+          <a href="#ftnMethod" class="nav-item" data-title="Fortnite Method">
             <i class="icon"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@
                 </g></svg
             ></i>
           </a>
-          <a href="#valMethod" class="nav-item">
+          <a href="#valMethod" class="nav-item" data-title="Valorant Method">
             <i class="icon"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,16 +97,16 @@
                 </g></svg
             ></i>
           </a>
-          <a href="#valTb" class="nav-item">
+          <a href="#valTb" class="nav-item" data-title="Valorant Triggerbot">
             <i class="icon"><img src="./assets/img/Tb.png" alt="Tb" /></i>
           </a>
-          <a href="#ua" class="nav-item">
+          <a href="#ua" class="nav-item" data-title="Unlock All">
             <i class="icon"><img src="./assets/img/ua.png" alt="ua" /></i>
           </a>
-          <a href="#fivemMethod" class="nav-item">
+          <a href="#fivemMethod" class="nav-item" data-title="FiveM Method">
             <i class="icon"><img src="./assets/img/FiveM.png" alt="FiveM" /></i>
           </a>
-          <a href="#fivemTb" class="nav-item">
+          <a href="#fivemTb" class="nav-item" data-title="FiveM Triggerbot">
             <i class="icon"
               ><img
                 width="50"
@@ -131,7 +131,9 @@
                 fonctionnement. Explications des différentes étapes à suivre...
               </p>
             </div>
-            <button class="next-step">Begin</button>
+            <div class="button-container">
+              <button class="next-step">Begin</button>
+            </div>
           </div>
           <div class="step">
             <h2>Fortnite Method</h2>
@@ -139,7 +141,10 @@
               <p>Étape 1 :</p>
               <p>Instructions pour la première étape...</p>
             </div>
-            <button class="next-step">2nd Step</button>
+            <div class="button-container">
+              <button class="prev-step">Previous</button>
+              <button class="next-step">2nd Step</button>
+            </div>
           </div>
           <div class="step">
             <h2>Fortnite Method</h2>
@@ -147,7 +152,10 @@
               <p>Étape 2 :</p>
               <p>Instructions pour la deuxième étape...</p>
             </div>
-            <button class="next-step">3rd Step</button>
+            <div class="button-container">
+              <button class="prev-step">Previous</button>
+              <button class="next-step">3rd Step</button>
+            </div>
           </div>
           <div class="step">
             <h2>Fortnite Method</h2>
@@ -155,7 +163,10 @@
               <p>Étape 3 :</p>
               <p>Instructions pour la dernière étape...</p>
             </div>
-            <button class="next-step">Finish</button>
+            <div class="button-container">
+              <button class="prev-step">Previous</button>
+              <button class="next-step">Finish</button>
+            </div>
           </div>
         </section>
         <section class="download-container" id="valMethod">
@@ -204,13 +215,32 @@
             <h2>Triggerbot Valorant</h2>
             <div class="download-welcome">
               <img
-                src="path/to/your/image.png"
+                src="./assets/img/LoaderTb.png"
                 alt="Triggerbot Valorant"
                 class="welcome-image"
               />
               <p class="description">
-                Description détaillée de la méthode Fortnite et de son
-                fonctionnement. Explications des différentes étapes à suivre...
+                <strong>Triggerbot Settings :</strong> <br />
+                Triggerbot Button: Enable/disable the triggerbot. <br />
+                Always ON: No need to press the key to activate the triggerbot,
+                it will be activated all the time. <br />
+                Shot if run: If unchecked, the triggerbot won't work if you run.
+                <br />
+                Fire Delay: Delay between each shot. <br />
+                <strong>Detection Settings :</strong> <br />
+                Tolerance: The higher the tolerance, the easier the color will
+                be to detect. <br />
+                FOV: It's the area to detect color. <br />
+              </p>
+              <p class="description">
+                <strong>Keybinds :</strong> <br />
+                Keybind Trigger: When you hold the keybind to enable the
+                triggerbot. <br />
+                Shot Control: Number Of Shot: When the color is detected, it
+                will press left click X times. <br />
+                Note : If you play Reyna, yellow colors are better. <br />
+                <strong>How to download ?</strong> <br />
+                Follow step bellow
               </p>
             </div>
             <button class="next-step">Begin</button>
@@ -282,87 +312,87 @@
           </div>
         </section>
         <section class="download-container" id="fivemMethod">
-            <div class="step active">
-                <h2>FiveM Method</h2>
-                <div class="download-welcome">
-                  <img
-                    src="path/to/your/image.png"
-                    alt="FiveM Method"
-                    class="welcome-image"
-                  />
-                  <p class="description">
-                    Description détaillée de la méthode FiveM et de son
-                    fonctionnement. Explications des différentes étapes à suivre...
-                  </p>
-                </div>
-                <button class="next-step">Begin</button>
-              </div>
-              <div class="step">
-                <h2>Fortnite Method</h2>
-                <div class="download-welcome">
-                  <p>Étape 1 :</p>
-                  <p>Instructions pour la première étape...</p>
-                </div>
-                <button class="next-step">2nd Step</button>
-              </div>
-              <div class="step">
-                <h2>Fortnite Method</h2>
-                <div class="download-welcome">
-                  <p>Étape 2 :</p>
-                  <p>Instructions pour la deuxième étape...</p>
-                </div>
-                <button class="next-step">3rd Step</button>
-              </div>
-              <div class="step">
-                <h2>Fortnite Method</h2>
-                <div class="download-welcome">
-                  <p>Étape 3 :</p>
-                  <p>Instructions pour la dernière étape...</p>
-                </div>
-                <button class="next-step">Finish</button>
-              </div>
-            </section>
+          <div class="step active">
+            <h2>FiveM Method</h2>
+            <div class="download-welcome">
+              <img
+                src="path/to/your/image.png"
+                alt="FiveM Method"
+                class="welcome-image"
+              />
+              <p class="description">
+                Description détaillée de la méthode FiveM et de son
+                fonctionnement. Explications des différentes étapes à suivre...
+              </p>
+            </div>
+            <button class="next-step">Begin</button>
+          </div>
+          <div class="step">
+            <h2>Fortnite Method</h2>
+            <div class="download-welcome">
+              <p>Étape 1 :</p>
+              <p>Instructions pour la première étape...</p>
+            </div>
+            <button class="next-step">2nd Step</button>
+          </div>
+          <div class="step">
+            <h2>Fortnite Method</h2>
+            <div class="download-welcome">
+              <p>Étape 2 :</p>
+              <p>Instructions pour la deuxième étape...</p>
+            </div>
+            <button class="next-step">3rd Step</button>
+          </div>
+          <div class="step">
+            <h2>Fortnite Method</h2>
+            <div class="download-welcome">
+              <p>Étape 3 :</p>
+              <p>Instructions pour la dernière étape...</p>
+            </div>
+            <button class="next-step">Finish</button>
+          </div>
+        </section>
         <section class="download-container" id="fivemTb">
-            <div class="step active">
-                <h2>FiveM Triggerbot</h2>
-                <div class="download-welcome">
-                  <img
-                    src="path/to/your/image.png"
-                    alt="FiveM Triggerbot"
-                    class="welcome-image"
-                  />
-                  <p class="description">
-                    Description détaillée de la méthode Fortnite et de son
-                    fonctionnement. Explications des différentes étapes à suivre...
-                  </p>
-                </div>
-                <button class="next-step">Begin</button>
-              </div>
-              <div class="step">
-                <h2>Fortnite Method</h2>
-                <div class="download-welcome">
-                  <p>Étape 1 :</p>
-                  <p>Instructions pour la première étape...</p>
-                </div>
-                <button class="next-step">2nd Step</button>
-              </div>
-              <div class="step">
-                <h2>Fortnite Method</h2>
-                <div class="download-welcome">
-                  <p>Étape 2 :</p>
-                  <p>Instructions pour la deuxième étape...</p>
-                </div>
-                <button class="next-step">3rd Step</button>
-              </div>
-              <div class="step">
-                <h2>Fortnite Method</h2>
-                <div class="download-welcome">
-                  <p>Étape 3 :</p>
-                  <p>Instructions pour la dernière étape...</p>
-                </div>
-                <button class="next-step">Finish</button>
-              </div>
-            </section>
+          <div class="step active">
+            <h2>FiveM Triggerbot</h2>
+            <div class="download-welcome">
+              <img
+                src="path/to/your/image.png"
+                alt="FiveM Triggerbot"
+                class="welcome-image"
+              />
+              <p class="description">
+                Description détaillée de la méthode Fortnite et de son
+                fonctionnement. Explications des différentes étapes à suivre...
+              </p>
+            </div>
+            <button class="next-step">Begin</button>
+          </div>
+          <div class="step">
+            <h2>Fortnite Method</h2>
+            <div class="download-welcome">
+              <p>Étape 1 :</p>
+              <p>Instructions pour la première étape...</p>
+            </div>
+            <button class="next-step">2nd Step</button>
+          </div>
+          <div class="step">
+            <h2>Fortnite Method</h2>
+            <div class="download-welcome">
+              <p>Étape 2 :</p>
+              <p>Instructions pour la deuxième étape...</p>
+            </div>
+            <button class="next-step">3rd Step</button>
+          </div>
+          <div class="step">
+            <h2>Fortnite Method</h2>
+            <div class="download-welcome">
+              <p>Étape 3 :</p>
+              <p>Instructions pour la dernière étape...</p>
+            </div>
+            <button class="next-step">Finish</button>
+          </div>
+        </section>
       </main>
     </section>
   </body>

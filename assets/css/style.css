@@ -152,7 +152,7 @@ header {
   border-radius: 20px;
   border: 1px solid rgba(37, 96, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(37, 96, 255, 0.1);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.active,
@@ -186,7 +186,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #000;
+  background: var(--bg-color);
   z-index: 9999;
 }
 
@@ -224,65 +224,47 @@ header {
   background: rgba(37, 96, 255, 0.1);
   border-radius: 15px;
   display: flex;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
+  padding: 0 15px;
+  overflow: hidden;
+  text-decoration: none;
 }
 
-.nav-item:hover {
-  transform: translateY(-5px);
-  background: rgba(37, 96, 255, 0.2);
-  border-color: rgba(37, 96, 255, 0.4);
-}
-
-.nav-item::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 80%;
-  height: 3px;
-  background: var(--main-color);
-  border-radius: 2px;
-  transition: transform 0.3s ease;
-}
-
-.nav-item:hover::after {
-  transform: translateX(-50%) scaleX(1);
-}
-
-.nav-item.active {
-  background: rgba(37, 96, 255, 0.15);
-  border: 2px solid var(--main-color);
-  box-shadow: 0 0 20px rgba(37, 96, 255, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.nav-item.active:hover {
-  background: rgba(37, 96, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: none;
-}
-
-.nav-item.active::after {
-  transform: translateX(-50%) scaleX(1);
+.nav-item i {
+  display: flex;
+  align-items: center;
 }
 
 .nav-item img {
   width: 30px;
   height: 30px;
-  object-fit: contain;
-  filter: brightness(1.2);
-  transition: transform 0.3s ease;
 }
 
-.nav-item:hover img {
-  transform: scale(1.1);
+.nav-item::after {
+  content: attr(data-title);
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  white-space: nowrap;
+  transform: translateX(-20px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 10px;
+  line-height: 50px;
+  height: 50px;
+}
+
+.nav-item:hover {
+  width: 200px;
+  background: rgba(37, 96, 255, 0.2);
+  border-color: rgba(37, 96, 255, 0.4);
+}
+
+.nav-item:hover::after {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .download-container {
@@ -318,14 +300,23 @@ header {
   display: flex;
 }
 
+.step h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Knewave", serif;
+}
+
 .download-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--main-color);
   backdrop-filter: blur(10px);
   padding: 20px;
+  gap: 20px;
   border-radius: 10px;
-  text-align: center;
   width: 80%;
-  max-width: 600px;
 }
 
 .download-container p {
@@ -402,4 +393,38 @@ header {
   width: 100%;
   max-width: 600px;
   margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-item::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    bottom: -25px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
 }

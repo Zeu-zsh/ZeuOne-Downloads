@@ -105,6 +105,38 @@ document.querySelectorAll(".nav-item").forEach((item) => {
   });
 });
 
+document.querySelectorAll(".prev-step").forEach((button) => {
+  button.addEventListener("click", function () {
+    const currentStep = this.closest(".step");
+    const prevStep = currentStep.previousElementSibling;
+
+    if (prevStep) {
+      // Mettre à jour le texte du bouton Next de l'étape précédente
+      const nextButtonInPrevStep = prevStep.querySelector(".next-step");
+      if (nextButtonInPrevStep) {
+        // Définir le texte en fonction de l'étape actuelle
+        if (currentStep.querySelector("p").textContent.includes("Étape 1")) {
+          nextButtonInPrevStep.textContent = "Begin";
+        } else if (
+          currentStep.querySelector("p").textContent.includes("Étape 2")
+        ) {
+          nextButtonInPrevStep.textContent = "2nd Step";
+        } else if (
+          currentStep.querySelector("p").textContent.includes("Étape 3")
+        ) {
+          nextButtonInPrevStep.textContent = "3rd Step";
+        } else {
+          nextButtonInPrevStep.textContent = "Final Step";
+        }
+      }
+
+      // Activer l'étape précédente
+      currentStep.classList.remove("active");
+      prevStep.classList.add("active");
+    }
+  });
+});
+
 document.querySelectorAll(".download-container").forEach((container) => {
   const steps = container.querySelectorAll(".step");
   const nextBtns = container.querySelectorAll(".next-step");
